@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    #数据源基本配置
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.1.106:3306/mybatis
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
+  #缓存redis配置
+  redis:
+    host: 192.168.1.106
+  #消息队列配置
+  rabbitmq:
+    host: 192.168.1.106
+  #邮件配置
+  mail:
+    host: smtp.qq.com
+    username: 505604843@qq.com
+    password: gslstaxpyoqqbibg
+  thymeleaf:
+    cache: false
+#mybatis配置
+mybatis:
+  mapper-locations: mapper/*
+logging:
+  level:
+    com.jf.spb.dao: debug
+  file: springboot.log

@@ -1,0 +1,10 @@
+server:
+  port: 8763
+eureka:
+  instance:
+    hostname: eurkaserver3
+  client:
+    service-url:
+      defaultZone: http://eurkaserver1:8761/eureka/,http://eurkaserver2:8762/eureka/
+    fetch-registry: false
+    register-with-eureka: false

@@ -1,0 +1,12 @@
+server:
+  port: 81
+spring:
+  application:
+    name: service-fegin
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8763/eureka/
+    register-with-eureka: false
+  instance:
+    instance-id: user192.168.1.19:81
